@@ -6,9 +6,17 @@ build-backend = "setuptools.build_meta"
 name = "ttt"
 description = "ttt"
 readme = "README.md"
+authors = [{name = "Toru Seo", email = "seo.t.aa@m.titech.ac.jp"}]
 license = {text = "MIT License"}
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
 requires-python = ">=3.9"
 dependencies = []
+dynamic = ["version"] # Version is read from uxsim/__init__.py
+
+[tool.setuptools]
+packages = {find = {include = ["ttt"]}}
+
+[tool.setuptools.dynamic]
+version = {attr = "ttt.__version__"}
