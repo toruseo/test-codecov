@@ -21,7 +21,7 @@ jobs:
     - name: Install pytest other dependencies
       run: pip install pytest pytest-xdist pytest-cov setuptools
     - name: Run examples with pytest
-      run: pytest -n auto tests/test.py --durations=0 -v --cov
+      run: pytest -n auto tests/test.py --durations=0 -v --cov=ttt
       
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
