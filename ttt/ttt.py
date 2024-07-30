@@ -8,3 +8,5 @@ def fuga():
     y = 1
     return x+y
 
+def spam():
+    print("!")
